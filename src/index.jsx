@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import utils from './Components/utils/global.context';
+import ContextGlobal from './Components/utils/global.context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <utils>
+      <ContextGlobal>
         <App/>
-        </utils>
+        </ContextGlobal>
       
   </React.StrictMode>
 );
