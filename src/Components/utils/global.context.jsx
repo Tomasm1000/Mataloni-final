@@ -6,10 +6,10 @@ const ContextGlobal = createContext();
 
 const reducer = (state, action) => {
   switch (action.type) {
-      case 'GET_CHARS':
-          return {...state, chars: action.payload}
-      case 'GET_CHAR':
-          return {...state, char: action.payload}
+      case 'GET_DENTISTS':
+          return {...state, dentists: action.payload}
+      case 'GET_DENTIST':
+          return {...state, dentist: action.payload}
       case 'ADD_FAV':
           return {...state, favs: [...state.favs, action.payload]}
       case 'SWITCH_THEME':
@@ -40,7 +40,7 @@ export const ContextProvider = ({ children }) => {
     axios(url)
     .then(res => {
         console.log(res.data.results)
-        dispatch({type: 'GET_CHARS', payload: res.data.results})})
+        dispatch({type: 'GET_DENTISTS', payload: res.data.results})})
     .catch(err => console.log(err))
 }, [])
 
