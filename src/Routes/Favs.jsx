@@ -7,7 +7,6 @@ const Favs = () => {
 
   const {favs} = useContextGlobal
 
-
   
   return (
     <>
