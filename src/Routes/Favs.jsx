@@ -6,6 +6,9 @@ import { useContextGlobal } from "../Components/utils/global.context";
 const Favs = () => {
 
   const {favs} = useContextGlobal
+
+
+  
   return (
     <>
       <h1>Dentists Favs</h1>
