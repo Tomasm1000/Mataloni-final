@@ -14,7 +14,7 @@ const Home = () => {
       <h1>Home</h1>
       <div className='card-grid'>
         
-      {state.chars.map(char => <Card char={char} key={char.id}/>)}
+      {state.chars.map(char => <Card dentist={dentist} key={dentist.id}/>)}
       </div>
     </main>
   )

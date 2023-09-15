@@ -12,7 +12,7 @@ const Detail = () => {
   const {state, dispatch} = useContextGlobal()
     const [loading, setLoading] = useState(true)
     const {id} = useParams()
-    const {name, email, phone, website} = state.char
+    const {name, email, phone, website} = state.dentist
     console.log(id)
 
   const url ='https://jsonplaceholder.typicode.com/users/:id' ;
@@ -21,7 +21,7 @@ const Detail = () => {
     fetch(url)
     .then(res => res.json())
     .then(data => {
-        dispatch({type: 'GET_CHAR', payload: data})
+        dispatch({type: 'GET_DENTIST', payload: data})
         setLoading(false)
     })
 }, [])
@@ -37,8 +37,8 @@ const Detail = () => {
       <h3>Correo electronico: {email}</h3>
       <h3>Telefono: {phone}</h3>
       <h3>Website: {website}</h3>
-        <img src={usuario.image} alt="" />
-        <button onClick={() => setFavs([...favs, usuario])}>⭐</button>
+        <img src={dentist.image} alt="" />
+        <button onClick={() => setFavs([...favs, dentist])}>⭐</button>
         </>}
       
     </div>
